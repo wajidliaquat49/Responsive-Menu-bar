@@ -1,0 +1,121 @@
+* {
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+
+    height: 90px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    /* padding: 0px 50px 0px 100px; */
+
+
+}
+
+nav ul li a {
+    margin: 0px 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+nav ul li .active,
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+
+nav .logo {
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 20px;
+    color: white;
+
+}
+
+
+.menu-btn i {
+    color: white;
+    font-size: 22px;
+    display: none;
+    cursor: pointer;
+}
+
+#click {
+    display: none;
+}
+
+
+
+.bg-image{
+    background-image: url(image/IMG_20240220_130656.jpg);
+    width: 100%;
+    height: 96vh;
+}
+
+@media (max-width:940px) {
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+
+
+        background-color: rgb(80, 69, 69);
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+
+    nav ul li {
+        margin: 30px 0px;
+
+    }
+
+    /* 
+    nav ul li .active,
+    nav ul li a:hover {
+        background: none;
+        color:red;
+    } */
+
+    .menu-btn i {
+        display: block;
+        padding-right: 15px;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    /* #click:checked~.menu-btn i::before {
+        content: "\f00d";
+    } */
+
+
+    #click:checked~.menu-btn i::before {
+        content: "\f00d";
+    }
+
+
+
+
+
+}
